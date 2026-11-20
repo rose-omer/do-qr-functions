@@ -1,8 +1,8 @@
-# 🚀 Advanced QR Code Generator - DigitalOcean Functions
+# Advanced QR Code Generator - DigitalOcean Functions
 
 DigitalOcean Functions üzerinde çalışan, zengin özelliklere sahip, modern bir Serverless QR Kod Oluşturucu.
 
-## ✨ Özellikler
+## Özellikler
 
 *   **Gelişmiş Formatlar:** PNG (Base64) ve SVG (Vektörel) çıktı desteği.
 *   **Tam Özelleştirme:** Boyut, renk ve arka plan rengi ayarları.
@@ -32,7 +32,7 @@ DigitalOcean Functions üzerinde çalışan, zengin özelliklere sahip, modern b
 
 Görseller fonksiyonun yerelde çağrılmasıyla alındı (`packages/qr/qr-generator/index.js`).
 
-## 🛠️ Kurulum ve Deploy
+## Kurulum ve Deploy
 
 Bu projeyi DigitalOcean üzerinde çalıştırmanın en kolay iki yolu:
 
@@ -60,7 +60,7 @@ doctl serverless deploy . --remote-build
 
 ---
 
-## 💻 Kullanım ve API Dokümantasyonu
+## Kullanım ve API Dokümantasyonu
 
 Fonksiyonunuz deploy edildikten sonra `/qr/qr-generator` endpoint'ine `POST` istekleri atarak kullanabilirsiniz.
 
@@ -84,7 +84,7 @@ Fonksiyonunuz deploy edildikten sonra `/qr/qr-generator` endpoint'ine `POST` ist
 ```bash
 curl -X POST "https://<APP-URL>/qr/qr-generator" \
   -H "Content-Type: application/json" \
-  -d 
+  -d
   {
     "text": "https://digitalocean.com",
     "size": 400
@@ -95,7 +95,7 @@ curl -X POST "https://<APP-URL>/qr/qr-generator" \
 ```bash
 curl -X POST "https://<APP-URL>/qr/qr-generator" \
   -H "Content-Type: application/json" \
-  -d 
+  -d
   {
     "text": "WIFI:S:EvInternetim;T:WPA;P:gizlisifre;;",
     "errorCorrectionLevel": "H",
@@ -119,7 +119,7 @@ const svgData = await response.text();
 
 ---
 
-## 🧪 Test ve Geliştirme
+## Test ve Geliştirme
 
 ### Tarayıcı Arayüzü (`test.html`)
 Proje içinde gelen `test.html` dosyası, API'yi denemeniz için modern bir arayüz sunar.
@@ -144,7 +144,7 @@ Bu komut `http://localhost:3000` adresinde basit bir sunucu başlatır.
 
 ---
 
-## 📂 Proje Yapısı
+## Proje Yapısı
 
 ```
 .
@@ -156,7 +156,7 @@ Bu komut `http://localhost:3000` adresinde basit bir sunucu başlatır.
 └── README.md                  # Dokümantasyon
 ```
 
-## 🛠️ Teknolojik Altyapı
+## Teknolojik Altyapı
 
 Proje, modern **Serverless (Sunucusuz)** mimari üzerine inşa edilmiştir.
 
@@ -168,5 +168,5 @@ Proje, modern **Serverless (Sunucusuz)** mimari üzerine inşa edilmiştir.
     *   **Event-Driven:** HTTP istekleri (tetikleyiciler) ile çalışır.
 *   **İşleyiş:** Backend, gelen JSON isteğindeki parametreleri (`text`, `size`, `color` vb.) işler, `qrcode` kütüphanesi ile görseli oluşturur ve istemciye uygun formatta (`base64`, `svg` veya `png`) yanıt döner.
 
-## 📝 Lisans
+## Lisans
 Bu proje eğitim amaçlıdır ve özgürce kullanılabilir.
