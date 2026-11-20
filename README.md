@@ -13,6 +13,25 @@ DigitalOcean Functions üzerinde çalışan, zengin özelliklere sahip, modern b
 
 ---
 
+## Ekran görüntüleri
+
+`test.html` arayüzü (QR Stüdyosu):
+
+| Metin / URL | WiFi | Kartvizit |
+|---|---|---|
+| ![URL için QR](docs/1-url-qr.png) | ![WiFi için QR, renkli](docs/2-wifi-qr.png) | ![Kartvizit için QR](docs/3-kartvizit-qr.png) |
+
+## Kullanım
+
+![Kullanım: URL ve WiFi QR kodu üretme](docs/kullanim.gif)
+
+1. Fonksiyonu deploy edin; `test.html` içindeki `FUNCTION_URL` değerine fonksiyon adresini yazın.
+2. `test.html` dosyasını açın. **Metin/URL**, **WiFi** ya da **Kartvizit** sekmesini seçin.
+3. Boyut, kenar boşluğu, hata düzeltme, format (PNG/SVG) ve renkleri ayarlayın.
+4. **QR Kod Oluştur** deyin; sonuç sağda görünür ve indirilebilir.
+
+Görseller fonksiyonun yerelde çağrılmasıyla alındı (`packages/qr/qr-generator/index.js`).
+
 ## 🛠️ Kurulum ve Deploy
 
 Bu projeyi DigitalOcean üzerinde çalıştırmanın en kolay iki yolu:
